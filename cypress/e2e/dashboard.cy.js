@@ -50,8 +50,8 @@ describe("Dashboard Page Test Case", () => {
 
   it('Upload some photos', () => {
     cy.fixture("photos").then((photos) => {
-      // Loop through the photos and upload each one
       photos.forEach(({ imageValue, descriptionValue }) => {
+
         // Find and type into the image and description input fields
         cy.get("input[name='image']").type(imageValue);
         cy.get("input[name='desc']").type(descriptionValue);
